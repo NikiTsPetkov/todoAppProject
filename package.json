@@ -1,0 +1,26 @@
+{
+  "name": "project-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"npm run start-json-server",
+    "start-json-server":"./node_modules/.bin/json-server --watch db.json &",
+    "start-live-server":"./node_modules/.bin//live-server ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikiTsPetkov/todoAppProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikiTsPetkov/todoAppProject/issues"
+  },
+  "homepage": "https://github.com/NikiTsPetkov/todoAppProject#readme",
+  "dependencies": {
+    "json-server": "^0.16.1"
+  }
+}
