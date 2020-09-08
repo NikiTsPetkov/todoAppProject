@@ -1,0 +1,55 @@
+header{
+    width:90vw;
+    margin: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+}
+form, main {
+    width:90vw;
+    margin: auto;
+    text-align:center;
+}
+.table{
+    display: flex;
+    border-bottom:1px solid grey;
+}
+.input-form{
+    padding: 10px 0px;
+}
+::placeholder {
+    color: #003;
+    font-size: 1.2em;
+  }
+input{
+    padding: 10px;
+    border:0;
+    border-radius: 1rem;
+    width:50vw;
+}
+input[type=text]{
+    border-bottom:3px solid black;
+}
+input[type=submit]{
+    font-size: 1em;
+    background-color: #003;
+    color:#ffe;
+}
+.green, .red{
+    width: 20%;
+    padding: 0;
+    margin: 0;
+}
+.green{
+    background-color: green;
+}
+.red{
+    background-color: red;;
+}
+.task{
+    width: 80%;
+}
+a{
+    text-decoration: none;
+    font-size: 1.2rem;
+}
