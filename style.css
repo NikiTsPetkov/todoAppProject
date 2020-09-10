@@ -1,55 +1,74 @@
-header{
-    width:90vw;
-    margin: auto;
-    text-align: center;
-    font-size: 1.2rem;
-    letter-spacing: 0.2rem;
+header {
+  width: 90vw;
+  margin: auto;
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  color: #003;
 }
-form, main {
-    width:90vw;
-    margin: auto;
-    text-align:center;
+form,
+main {
+  width: 90vw;
+  margin: auto;
+  text-align: center;
 }
-.table{
-    display: flex;
-    border-bottom:1px solid grey;
+.table {
+  display: flex;
+  border-bottom: 1px solid #000033;
+  margin: 0;
 }
-.input-form{
-    padding: 10px 0px;
+.input-task,
+.input-deadline,
+.submit {
+  padding: 6px 0px;
 }
 ::placeholder {
-    color: #003;
-    font-size: 1.2em;
-  }
-input{
-    padding: 10px;
-    border:0;
-    border-radius: 1rem;
-    width:50vw;
+  color: #003;
+  font-size: 1.2em;
 }
-input[type=text]{
-    border-bottom:3px solid black;
+input {
+  padding: 10px;
+  border: 0;
+  border-radius: 1rem;
+  width: 50vw;
 }
-input[type=submit]{
-    font-size: 1em;
-    background-color: #003;
-    color:#ffe;
+input:focus {
+  outline: none;
 }
-.green, .red{
-    width: 20%;
-    padding: 0;
-    margin: 0;
+input:focus::placeholder {
+  color: transparent;
 }
-.green{
-    background-color: green;
+input[type="text"] {
+  border-bottom: 3px solid black;
 }
-.red{
-    background-color: red;;
+input[type="button"] {
+  font-size: 1em;
+  background-color: #003;
+  color: #ffe;
+  cursor: pointer;
 }
-.task{
-    width: 80%;
+.green,
+.red {
+  width: 20%;
+  padding: 0;
+  margin: 0;
 }
-a{
-    text-decoration: none;
-    font-size: 1.2rem;
+.green {
+  background-color: green;
+  color: white;
+}
+.red {
+  background-color: red;
+  color: white;
+}
+.yellow {
+  background-color: yellow;
+  color: #003;
+}
+.task {
+  width: 80%;
+}
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
 }
