@@ -6,7 +6,6 @@
   "scripts": {
     "start":"npm run start-json-server",
     "start-json-server":"./node_modules/.bin/json-server --watch db.json &",
-    "start-live-server":"./node_modules/.bin//live-server ./",
     "test": "echo \"Error: no test specified\" && exit 1"
 
   },

@@ -1,25 +1,42 @@
-/* let buttonTask = document.querySelector(".buttonSubmit");
+// /* function readTextFile(file, callback) {
+//   let rawFile = new XMLHttpRequest();
+//   rawFile.overrideMimeType("application/json");
+//   rawFile.open("GET", file, true);
+//   rawFile.onreadystatechange = function() {
+//       if (rawFile.readyState === 4 && rawFile.status == "200") {
+//           callback(rawFile.responseText);
+//       }
+//   }
+//   rawFile.send(null);
+// }
 
-buttonTask.addEventListener("click", function () {
-  let task = document.querySelector(".taskText").value;
-  let deadline = document.querySelector(".deadline").value;
-  console.log(task, deadline);
-  document.querySelector(".todo").innerHTML = task;
-  document.querySelector(".time").innerHTML = deadline;
-}); */
-
-
-
+// readTextFile("/db.json", function(text){
+//   let data = JSON.parse(text);
+//   console.log(data.todos[0].title);
+// }); */
+fetch("/db.json")
+  .then(function(res){
+    return res.json()
+  })
+  .then(function(todosArr){
+    let arr = Object.entries(todosArr);
+    arr.forEach(([key,values]) => {
+      console.log(key);
+      values.forEach((value) =>{
+        document.querySelector(".task").innerHTML += `<p><a>${value.title}</a></p>`;
+        document.querySelector(".time").innerHTML += `<p>${value.id}</p>`
+      })
+    })
+  })
+  .catch(function(error){
+    console.log(error)
+  });
 let buttonTask = document.querySelector(".buttonSubmit");
 
 buttonTask.addEventListener("click", function () {
-  fetch('https://jsonplaceholder.typicode.com/todos')
-  .then(response => response.json())
-  .then(json => {
-    json.forEach(element => {
-      document.querySelector(".todo").innerHTML += `<p>${element.title}</p>`;
-      document.querySelector(".time").innerHTML += `<p>${element.completed}</p>`;
-    });
-    
-  });
-}); 
+  let task = document.querySelector(".task").value;
+  let deadline = document.querySelector(".time").value;
+  console.log(task, deadline);
+  document.querySelector(".todo").innerHTML = task;
+  document.querySelector(".time").innerHTML = deadline;
+})
